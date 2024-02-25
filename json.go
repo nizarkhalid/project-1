@@ -19,6 +19,7 @@ func responeErr(w http.ResponseWriter, code int, msg string) {
 	})
 }
 
+// responseWithJSON writes a JSON-encoded message to the ResponseWriter.
 func responeWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	data, err := json.Marshal(payload)
 	if err != nil {
